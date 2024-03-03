@@ -1,0 +1,102 @@
+#app {
+    div {
+        overflow-wrap: break-word;
+    }
+    main {
+        border: solid red;
+        overflow: hidden;
+
+        span {
+            border: solid green;
+            font-size: 5rem;
+            animation:
+                1,
+                2s test inifite;
+        }
+
+        p {
+            border: solid gold;
+        }
+    }
+
+    .fill {
+        height: 30%;
+        border: solid green;
+        overflow: hidden;
+    }
+
+    .inside {
+        overflow-wrap: anywhere;
+        height: 100%;
+    }
+
+    .main-inside {
+        overflow-wrap: anywhere;
+        height: 100%;
+    }
+
+    .main {
+        height: 100%;
+        overflow: hidden;
+        font-size: 3rem;
+
+        span {
+            //animation: colorRandom 1s infinite;
+            //animation: test 1.2s infinite;
+        }
+
+        span:nth-of-type(even) {
+            animation: colorRandom 0.5s infinite alternate;
+        }
+
+        span:nth-of-type(odd) {
+            animation: colorRandom 1s infinite alternate;
+        }
+    }
+
+    @keyframes test {
+        0% {
+            color: #001f3f;
+        }
+
+        100% {
+            color: #ff4136;
+        }
+    }
+
+    @keyframes colorRandom {
+        0% {
+            color: #ffffd1;
+        }
+
+        50% {
+            color: #d6ffda;
+        }
+
+        55% {
+            color: #dad6ff;
+        }
+
+        80% {
+            color: #ffd6e8;
+        }
+
+        85% {
+            color: #f5f5dc;
+        }
+
+        100% {
+            color: #f4e4e4;
+        }
+    }
+
+    @keyframes pulse {
+        0% {
+            color: #001f3f;
+        }
+
+        100% {
+            color: #ff4136;
+        }
+    }
+}
